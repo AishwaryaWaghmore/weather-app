@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Weather Forecast</h1>
+    <form id="locationForm">
+      <!-- Search Bar with Autocomplete -->
+      <input 
+        type="text" 
+        id="locationInput" 
+        placeholder="Enter city name" 
+        autocomplete="off"
+        list="citySuggestions" 
+        required
+      >
+      <datalist id="citySuggestions"></datalist>
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weatherResult" class="weather-card">
+      <h2 id="cityName"></h2>
+      <div class="weather-details">
+        <div class="property">
+          <p class="label">Temperature</p>
+          <p id="temperature" class="value">--°C</p>
+        </div>
+        <div class="property">
+          <p class="label">Feels Like</p>
+          <p id="feelsLike" class="value">--°C</p>
+        </div>
+        <div class="property">
+          <p class="label">Humidity</p>
+          <p id="humidity" class="value">--%</p>
+        </div>
+        <div class="property">
+          <p class="label">Wind Speed</p>
+          <p id="windSpeed" class="value">-- m/s</p>
+        </div>
+        <div class="property">
+          <p class="label">Description</p>
+          <p id="description" class="value">--</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
